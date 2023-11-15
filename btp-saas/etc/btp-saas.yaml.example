@@ -1,0 +1,35 @@
+Name: btp-saas
+Host: 0.0.0.0
+Port: 8001
+
+MysqlConf:
+  Host: 127.0.0.1:3306
+  User: user
+  Pass: pass
+  Db: db
+
+RedisConf:
+  Host: 127.0.0.1:6379
+  Type: node
+  Pass: pass
+  Tls: true
+
+# epusdt 配置
+PayConf:
+  BaseApi: http://127.0.0.1:8001
+  ApiToken: apiToken
+  NotifyUrl: http://127.0.0.1:8001/pay/notify/%s
+
+AppConf:
+  # 开会员订单过期时间(分)
+  OrderExpireMinute: 9
+  # 充值订单过期时间(分)
+  RechargeExpireMinute: 9
+  # 代理地址
+  ProxyUrl: socks5://127.0.0.1:1080
+  # TON助记词
+  TonSeed: birth pattern then forest walnut then phrase walnut fan pumpkin pattern then cluster blossom verify then forest velvet pond fiction pattern collect then then
+  # fragment hash
+  Hash: f8e8690959d5b64095
+  # fragment cookie
+  Cookie: stel_ssid=052c1dad9226b29029_9517489419833914253; stel_dt=-480; stel_ton_token=PlrMkcQGmSKJU12o2SzqAEgOE-gpIWxSbo3EyeNShSyvI4pQkYURLOTuXY-v6DZYTTtehJ9SmGOZq0vNEEwcsKSTgJ84UZ3yf23vGuH-WD21Ib067kBGBrrpsxUT3OtMUD-ZFRUYdMSvu1NUlTh9-JhJt-4QUZmWnSt2E_nzYuLa_CprRTQ

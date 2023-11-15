@@ -1,0 +1,9 @@
+.idea
+*.exe
+bin/
+etc/*.yaml
+*.json
+output/
+main
+*.yaml
+

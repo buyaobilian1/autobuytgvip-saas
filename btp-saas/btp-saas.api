@@ -1,0 +1,36 @@
+syntax = "v1"
+
+info (
+	title: btp saas
+	desc: btp saas
+	author: "chouyan"
+	email: "admin@google.com"
+)
+
+type WebhookRequest {
+	BotId int64 `path:"botId"`
+}
+
+type PayNotifyBody {
+	TradeId            string  `json:"trade_id"`
+	OrderId            string  `json:"order_id"`
+	Amount             float64 `json:"amount"`
+	ActualAmount       float64 `json:"actual_amount"`
+	Token              string  `json:"token"`
+	BlockTransactionId string  `json:"block_transaction_id"`
+	Signature          string  `json:"signature"`
+	Status             int     `json:"status"`
+}
+
+type PayNotifyRequest {
+	Type string `path:"type"`
+	PayNotifyBody
+}
+
+service btp-saas-api {
+	@handler Webhook
+	post /webhook/:botId(WebhookRequest)
+
+	@handler PayNotify
+	post /pay/notify/:type(PayNotifyRequest)
+}

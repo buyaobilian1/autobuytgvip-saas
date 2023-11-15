@@ -1,0 +1,19 @@
+Name: btp-agent
+Host: 0.0.0.0
+Port: 8002
+
+MysqlConf:
+  Host: 127.0.0.1:3306
+  User: btp_saas
+  Pass: 123456
+  Db: btp_saas
+
+AppConf:
+  # 代理管家机器人TOKEN
+  BotToken: 6547988277:sdfasdfasdfasfasdfasdfasdfasdfasdfasdf
+  # 代理地址
+  ProxyUrl: socks5://127.0.0.1:7890
+  # 机器人回调地址，saas程序的地址
+  WebhookUrl: http://127.0.0.1:8002/webhook/%d
+  # webhook密钥
+  WebhookSecret: AbAb123456

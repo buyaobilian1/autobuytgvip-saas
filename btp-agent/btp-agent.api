@@ -1,0 +1,19 @@
+syntax = "v1"
+
+info (
+	title: btp agent
+	desc: btp agent
+	author: "chouyan"
+	email: "admin@google.com"
+)
+
+type PingRequest {
+}
+
+type PingResponse {
+}
+
+service btp-agent-api {
+	@handler Ping
+	get /ping(PingRequest) returns(PingResponse)
+}

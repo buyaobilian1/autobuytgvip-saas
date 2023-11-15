@@ -1,0 +1,8 @@
+.idea
+*.exe
+bin/
+*.json
+output/
+main
+btp-agent
+*.yaml
